@@ -1,0 +1,4 @@
+1. Impliment LL using stack
+2. Find nth node from the end.
+3. Cycle in a LL (Floyd algo). Find the starting point, remove the cycle.
+4. reverse a LL

@@ -1,0 +1,5 @@
+This is an input file to 
+character counting
+word couting
+lines counting
+programme.
