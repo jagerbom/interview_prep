@@ -58,6 +58,7 @@ void insert_s(s_node_t **head, int ele)
 void delete_s(s_node_t **head, int ele)
 {
     s_node_t *temp = *head;
+    s_node_t *prev;
     //Empty LL
     if (*head == NULL) {
         printf(" Empty LL");
@@ -72,8 +73,10 @@ void delete_s(s_node_t **head, int ele)
     // search and delete assuming no duplicates.
     while (temp->next != NULL) {
         if (temp->next->ele == ele) {
+            prev = temp->next;
             temp->next = temp->next->next;
-            free(temp->next);
+            print_s(*head);
+            free(prev);
             return;
         }
         temp = temp->next;
@@ -122,6 +125,6 @@ int main (int argc, char *argv[])
     head = create_list(head); 
     print_s(head);
     head = delete_list(head);
-    reverse_s(&head, ITERATIVE);
+    //reverse_s(&head, ITERATIVE);
     print_s(head);
 }
