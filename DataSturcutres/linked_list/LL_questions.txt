@@ -1,4 +1,38 @@
+Top Linked list questions.
+
 1. Impliment LL using stack
-2. Find nth node from the end.
+2. Find nth node from the end
 3. Cycle in a LL (Floyd algo). Find the starting point, remove the cycle.
 4. reverse a LL
+5. Merge two sorted linked lists
+6. Convert a sorted list to BST
+7. remove duplicates from sorted linked list
+8. check if list is a palindrome
+9. How to remove all elements from a linked list of integers which match with given value
+10. How to remove all elements from a linked list of integers which match with given value
+
+11. Flattening a Linked List Given a linked list where every node represents a linked list and contains two pointers of its type: 
+(i) Pointer to next node in the main list (we call it ‘right’ pointer in the code below) 
+(ii) Pointer to a linked list where this node is headed (we call it the ‘down’ pointer in the code below). 
+All linked lists are sorted. See the following example  
+
+       5 -> 10 -> 19 -> 28
+       |    |     |     |
+       V    V     V     V
+       7    20    22    35
+       |          |     |
+       V          V     V
+       8          50    40
+       |                |
+       V                V
+       30               45
+
+Write a function flatten() to flatten the lists into a single linked list. The flattened linked list should also be sorted. For example, for the above input list, output list should be 5->7->8->10->19->20->22->28->30->35->40->45->50. 
+
+12. Delete the elements in an linked list whose sum is equal to zero (Question  not very clear)
+13. Delete middle of linked list
+14. Add 1 to a number represented as linked list
+15. Reverse a linked list in groups of given size
+16. Delete last occurrence of an item from linked list
+
+
