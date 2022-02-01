@@ -50,8 +50,12 @@ extern void print_d(s_node_t *head);
 extern s_node_t *alloc_new_node(int ele); // allocats a new SLL node
 
 //loop related functions
-void ll_loop(s_node_t *head, int len);
-void create_loop(s_node_t *head, int len);
-void detect_loop(s_node_t *head, int len);
+extern void ll_loop(s_node_t *head, int len);
+extern void create_loop(s_node_t *head, int len);
+extern void detect_loop(s_node_t *head, int len);
+
+extern void linkedlist(void);
+
+
 
 #endif //__ll_h__

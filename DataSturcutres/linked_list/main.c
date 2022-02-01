@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "ll.h"
 
-int main (int argc, char *argv[])
+void linkedlist(void) 
 {
     s_node_t *head = NULL;
     int len = 0;
@@ -12,4 +12,9 @@ int main (int argc, char *argv[])
     //reverse_s(&head, ITERATIVE);
     ll_loop(head, len);
     //print_s(head);
+}
+
+int main (int argc, char *argv[])
+{
+    linkedlist();
 }
