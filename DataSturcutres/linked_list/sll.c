@@ -33,7 +33,7 @@ void reverse_s (s_node_t **head, int type)
     return;
 }
 
-void insert_s(s_node_t **head, int ele)
+void insert_s(s_node_t **head, int ele, int *len)
 {
     s_node_t *new_node;
     s_node_t *temp = *head;
@@ -45,6 +45,7 @@ void insert_s(s_node_t **head, int ele)
     //inserting first element
     if (*head == NULL) {
         *head = new_node;
+        *len = *len+1;
         return;
     }
     while (temp->next != NULL)
@@ -52,10 +53,11 @@ void insert_s(s_node_t **head, int ele)
         temp = temp->next;
     }
     temp->next = new_node;
+    *len = *len+1;
     return;
 }
 
-void delete_s(s_node_t **head, int ele)
+void delete_s(s_node_t **head, int ele, int *len)
 {
     s_node_t *temp = *head;
     s_node_t *prev;
@@ -66,7 +68,8 @@ void delete_s(s_node_t **head, int ele)
     }
     //delete from head
     if (temp->ele == ele) {
-        *head = temp->next;
+        *head = (*(head))->next;
+        *len = *len - 1;
         free(temp);
         return;
     }
@@ -75,7 +78,8 @@ void delete_s(s_node_t **head, int ele)
         if (temp->next->ele == ele) {
             prev = temp->next;
             temp->next = temp->next->next;
-            print_s(*head);
+            //print_s(*head);
+            *len = *len - 1;
             free(prev);
             return;
         }
@@ -99,32 +103,78 @@ void print_s(s_node_t *head)
     printf("\n");
 }
 
-s_node_t *create_list(s_node_t *head)
+int create_list(s_node_t **head)
 {
-    insert_s(&head, 1);
-    insert_s(&head, 2);
-    insert_s(&head, 3);
-    insert_s(&head, 4);
-    insert_s(&head, 5);
-    return head;
+    int len = 0;
+    insert_s(head, 1, &len);
+    insert_s(head, 2, &len);
+    insert_s(head, 3, &len);
+    insert_s(head, 4, &len);
+    insert_s(head, 5, &len);
+    printf("\nlength of a LL is %d \n", len);
+    return len;
 }
 
-s_node_t *delete_list(s_node_t *head)
+int delete_list(s_node_t **head, int len)
 {
-    delete_s(&head, 2);
-    delete_s(&head, 5);
-    delete_s(&head, 3);
-    delete_s(&head, 4);
-    delete_s(&head, 1);
-    return head;
+    delete_s(head, 2, &len);
+    delete_s(head, 5, &len);
+    delete_s(head, 3, &len);
+    delete_s(head, 4, &len);
+    delete_s(head, 1, &len);
+    printf("\nlength of a LL is %d \n", len);
+    return len;
+}
+
+void  create_loop(s_node_t *head, int len)
+{
+    if (len > MIN_LEN_FOR_LOOP) {
+        head->next->next->next->next = head->next; 
+    }
+}
+
+void detect_loop(s_node_t *head, int len)
+{
+    s_node_t *slow = head;
+    s_node_t *fast = head;
+
+    if (len == 0) {
+        printf("\n Empty LL");
+        return;
+    }
+    if (len == 1) {
+        printf("\n single element in LL");
+        return;
+    }
+    while (1) {
+        if (slow == NULL || fast == NULL || fast->next == NULL) {
+            printf("\n no loop");
+            return;
+        }
+        slow = slow->next;
+        fast = fast->next->next;
+        if (slow == fast) {
+            printf("\n Loop found");
+            return;
+        }
+    }
+}
+
+void ll_loop(s_node_t *head, int len)
+{
+    create_loop(head, len);
+    detect_loop(head, len);
+    return;
 }
 
 int main (int argc, char *argv[])
 {
     s_node_t *head = NULL;
-    head = create_list(head); 
+    int len = 0;
+    len = create_list(&head); 
     print_s(head);
-    head = delete_list(head);
+    //len = delete_list(&head, len);
     //reverse_s(&head, ITERATIVE);
-    print_s(head);
+    ll_loop(head, len);
+    //print_s(head);
 }
