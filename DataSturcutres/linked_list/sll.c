@@ -166,15 +166,3 @@ void ll_loop(s_node_t *head, int len)
     detect_loop(head, len);
     return;
 }
-
-int main (int argc, char *argv[])
-{
-    s_node_t *head = NULL;
-    int len = 0;
-    len = create_list(&head); 
-    print_s(head);
-    //len = delete_list(&head, len);
-    //reverse_s(&head, ITERATIVE);
-    ll_loop(head, len);
-    //print_s(head);
-}
