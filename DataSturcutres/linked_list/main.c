@@ -10,7 +10,7 @@ void linkedlist(void)
     print_s(head);
     //len = delete_list(&head, len);
     //reverse_s(&head, ITERATIVE);
-    ll_loop(head, len);
+    //ll_loop(head, len);
     //print_s(head);
 }
 

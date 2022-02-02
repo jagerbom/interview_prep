@@ -1,0 +1,32 @@
+--------------------------------
+Data Structures
+--------------------------------
+1. Linked List
+2. Arrays
+3. Stacks
+4. Queues
+5. Tree
+6. Hash
+7. Heap
+8. Sorting
+9. Serching
+10. Trie
+11. Graphs (BFS, DFS)
+12. Strings
+13. Algo design techniques
+14. Greedy Algo
+15. Divide and conquer Algo
+16. Dynamic Programming
+17. Bitwise Programming
+
+--------------------------------
+ System Design
+--------------------------------
+
+--------------------------------
+ OS concepts
+--------------------------------
+
+--------------------------------
+Object oriented design
+--------------------------------
