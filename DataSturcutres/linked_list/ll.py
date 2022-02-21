@@ -28,7 +28,6 @@ class LinkedList:
             temp = temp.getNext()
     
     def deletelist(self, data):
-        temp = self.head
         if (self.head == None):
             print("LL is empty")
             return
@@ -56,6 +55,6 @@ if __name__ == '__main__':
     llist.push(1)
     llist.push(3)
     llist.push(2)
-    #llist.deletelist(2)
+    #llist.deletelist(3)
     llist.printlist()
 
