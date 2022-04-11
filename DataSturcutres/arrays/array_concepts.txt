@@ -1,0 +1,16 @@
+Array insertions:
+Array Deletions:
+Array search:
+
+Python:
+
+methods on array most commonloy uses:
+len(arr) -> gives the length of Array
+arr.append() -> appends an element at the end of an array
+arr.clear() -> remove all the elements
+arr.copy() -> returns a copy of arr
+arr.insert() -> inserts an element at specified location
+arr.pop() -> removes from specified index
+arr.reverse() -> reverses an array  #in place modification, will not return a value
+arr.sort() -> sorts an array
+sorted() -> for sorting an array
