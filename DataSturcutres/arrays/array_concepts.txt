@@ -1,6 +1,84 @@
 Array insertions:
+    - insertion in an array is O(n)
+    - always keep track of last index filled in an array by a length variable
+    - Duplicate zeros (leetcode explore card)
+    - Merge sorted array (leetcode explore card)
+
 Array Deletions:
-Array search:
+    - remove all instace of an element from an array. 
+    Input: nums = [3,2,2,3], val = 3 Output: 2, nums = [2,2,_,_]: solution: Two pointer approach. slow pointer and fast pointer.
+    int i = 0;
+    for (int j = 0; j < nums.length; j++) {
+        if (nums[j] != val) {
+            nums[i] = nums[j];
+            i++;
+        }
+    }
+    - remove duplicates in a sorted array: Almosts same as previous question.
+       Slow runner -> will not increment till we have duplicate elements. As soon as we see a non duplicate element, we copy that 
+       to the first duplicate.
+       fast runner -> to iterarte over the array, always increments by 1
+       
+       if (nums.length == 0) return 0;
+        int i = 0;
+        for (int j = 1; j < nums.length; j++) {
+        if (nums[j] != nums[i]) {
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+    
+Array search: (most easy)
+    - Almost everytime we will need to use a hash table. elemnet will be the key and index will be the value.
+      If array is sorted then binary search ofcourse!
+
+Some more question:
+    - Given an array arr, replace every element in that array with the greatest element among the elements to its right, and replace the last element with -1.
+      Input: arr = [17,18,5,4,6,1]
+      Output: [18,6,6,6,1,-1]
+      
+      Scan elements from end, keep a track of maximum.
+
+      def replaceElements(self, arr: List[int]) -> List[int]:
+        if (len(arr) == 1):
+            arr[0] = -1
+            return arr
+        
+        if (len(arr) == 2):
+            arr[0] = arr[1]
+            arr[1] = -1
+            return arr
+        
+        last_index = len(arr) - 1
+        temp = arr[last_index - 1]
+        arr[last_index - 1] = arr[last_index]
+        arr[last_index] = temp
+        maximum = max(arr[last_index], arr[last_index - 1])
+        
+        for i in range ((last_index - 2), -1, -1):
+            temp = arr[i]
+            arr[i] = maximum
+            maximum = max(temp, maximum)
+        
+        arr[last_index] = -1    
+        return arr
+
+    - given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements. 
+       Two pointer approach. slow and fast, fast always increments, slow increments when element is not zero.
+        j = 0
+        for i, num in enumerate(nums):
+            if num != 0:
+                nums[j], nums[i] = nums[i], nums[j]
+                j += 1   
+
+
+Tips and tricks:
+1. Always think of in place and O(n) solution
+2. Try to iterate from back of the array
+3. Try two pointer approach. (one pointer to iterate over the array and another to tackle other elements).
+    fast always moves
+    slow moves based on some conditions. 
+
 
 Python:
 
