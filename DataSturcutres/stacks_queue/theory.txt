@@ -1,0 +1,6 @@
+Queue:
+Operations: 
+    - Enqueue: add an element at tail
+    - Dequeue: Remove from head
+Implimentation:
+        
