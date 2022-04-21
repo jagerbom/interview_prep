@@ -1,0 +1,15 @@
+What is a heap: A heap should fulfill two conditions
+    1. It is a complete binary tree. (leaf nodes filled from left to right)
+    2. for minHeap Parent should be less than or equal to child and similarly for max heap.
+
+Heapsort: for heapsort we need to heapify any array and then keep removing the top elements from the heap.
+
+Python library:
+import heapq (only Min heap supported)
+
+functions:
+heapq.heapify(array) => modifies array in place
+heapq.heappush(li,4) => adds an element to heap
+heapq.heappop(li) => removes top element from the heap
+heapq.nlargest(k, array, key = fun) :- This function is used to return the k largest elements from the iterable specified and satisfying the key if mentioned.
+heapq.nsmallest(k, array, key = fun) :- This function is used to return the k smallest elements from the iterable specified and satisfying the key if mentioned.
