@@ -13,3 +13,5 @@ heapq.heappush(li,4) => adds an element to heap
 heapq.heappop(li) => removes top element from the heap
 heapq.nlargest(k, array, key = fun) :- This function is used to return the k largest elements from the iterable specified and satisfying the key if mentioned.
 heapq.nsmallest(k, array, key = fun) :- This function is used to return the k smallest elements from the iterable specified and satisfying the key if mentioned.
+
+Questions:

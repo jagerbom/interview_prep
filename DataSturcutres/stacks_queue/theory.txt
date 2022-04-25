@@ -3,4 +3,21 @@ Operations:
     - Enqueue: add an element at tail
     - Dequeue: Remove from head
 Implimentation:
-        
+        from queue import Queue
+        q = Queue(maxsize = 3)      
+        print(q.qsize())
+        q.put('a')
+        q.put('b')
+        q.put('c')
+        print("\nFull: ", q.full())
+        print(q.get())
+        print(q.get())
+        print(q.get())
+        print("\nEmpty: ", q.empty())
+
+Circular queue is better.
+front = rear = -1 : at start
+for one element: front = rear = 0
+Enqueue: rear = (rear + 1) % N
+Dequeue: Front = (front + 1) % N
+

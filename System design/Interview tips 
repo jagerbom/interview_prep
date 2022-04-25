@@ -1,0 +1,6 @@
+always think of dividing systerm into multiple components
+always avoid single point of failures
+always use a cache
+Decide DB carefully
+Service has to be fast, reliable and secure
+ 

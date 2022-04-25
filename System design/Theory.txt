@@ -1,0 +1,23 @@
+Horizintal scaling : Scale the number of servers
+Vertical scaling: Scale the size of a nmachine
+
+Load balancing: How to distribute requests equally to all servers.
+hashing: hash the request using some hash function and them  modulo by number of servers. Problem with this approach is adding
+    a new server. 
+Consistant hash: https://www.youtube.com/watch?v=zaRkONvyGr8&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=4
+
+Message Queue: https://www.youtube.com/watch?v=oUJbuFMyBDk&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=5
+
+Microservice vs Monolith: 
+stack overflow uses monilith architecture
+google/fb etc use microservice.
+
+microservice: components are broken into several microservices, each of them have their own database. microservice talk to each other all the time
+    clients send the request to a gateway which inturn sends the request to the correct microservice.
+Monolith: Single system which contins all the parts of a deployment.
+
+database Sharding: https://www.youtube.com/watch?v=5faMjKuB9bc&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=7 (Not going in detail)
+
+Tinder System design: https://www.youtube.com/watch?v=tndzLznxq40&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=10
+
+distributed Caching: https://www.youtube.com/watch?v=U3RkDLtS7uY&list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX&index=10
