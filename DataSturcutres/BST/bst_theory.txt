@@ -1,0 +1,10 @@
+We all know what a BST is.
+Traversal:
+    Preopere: root-left-right
+    inorder :  left-root-right gives ascending.
+    postorder: left-right-root
+    level order: BFS (breadth first)
+
+Popular questions:
+    - Validate a BST
+    - Find inorder successor    

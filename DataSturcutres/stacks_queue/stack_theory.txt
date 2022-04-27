@@ -1,0 +1,21 @@
+stack can b imnplimented as a (in python)
+    - list
+    - collections.deque
+    - queue.LifoQueue
+
+-   list.appened() and list.pop() for list imnplimentation
+
+-   from collections import deque: 
+    stack = deque()
+    stack.append(1)
+    print(stack.pop())
+
+-   from queue import LifoQueue
+    stack = LifoQueue(maxsize=3)
+    stack.put('a')
+    print(stack.get())
+
+Popular questions:
+    - Reverse polish notation
+    - Balance parenthesis
+
