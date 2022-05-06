@@ -15,3 +15,5 @@ heapq.nlargest(k, array, key = fun) :- This function is used to return the k lar
 heapq.nsmallest(k, array, key = fun) :- This function is used to return the k smallest elements from the iterable specified and satisfying the key if mentioned.
 
 Questions:
+K largest elements
+K smallest elements

@@ -1,0 +1,33 @@
+Interview held on 4th may and 5th may 2022
+
+
+Round 1 (C1) 45 minutes:  (recursion) (https://github.com/iradofurioso/hackerRank-workschedule-avaliation)
+An employee has a work schedule for 7 days. There is "Workhours" that he needs to complete in one week. Also, there is a mazimum number of hours
+that he can work in a single day (MaxDayHours). Schedule is given in a form of input string of length 7. each char od string denotes 
+the number of hours worked that day. the string will have few question marks. We need to determine all possible strings that full fill above conditions.
+
+ex: Workhours = 15, MaxDayHours = 5
+string: 4 1 ? 3 ? 2 ?
+possible answer: 4 1 '1' 3 '1' 2 '3'
+
+
+
+Round 2 (c2) 45 minutes: https://www.geeksforgeeks.org/flipkart-internship-interview-on-campus/
+A person can create a flower bouquet with either 3 roses (cost of bouquet = p) or 1 rose and 1 lily (cost = q) 
+In an array of flowers, the person has to select contiguous set of flowers i.e. 2 or 3 to gain maximum cost. 
+
+Input format: A string of 0(denotes rose) and 1(denotes lily). 
+Output : Maximum cost. 
+
+Examples: 
+
+Input: p = 2, q = 3, s = 0001000
+Output: 5
+
+Solution:
+if three consecutive 0's:
+              dp[i] = max(dp[i-1], p + dp[i-3])
+          else if 1, 0 or 0, 1:
+              dp[i] = max(dp[i-1], q + dp[i-2])
+          
+          return dp[n-1]
