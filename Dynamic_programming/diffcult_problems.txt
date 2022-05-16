@@ -1,0 +1,2 @@
+https://leetcode.com/explore/learn/card/dynamic-programming/631/strategy-for-solving-dp-problems/4045/ : Longest common subsequence
+https://leetcode.com/problems/maximal-square/solution/

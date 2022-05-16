@@ -24,24 +24,18 @@ def bstInsert(root, value):
         return root                        
 
 if __name__ == '__main__':
-        '''
-        import heapq
-        height = [2,3,8,7,4,5]
-        dict_new = {}
-        for x in range(len(height)):
-            dict_new[height[x]] = x
-            
-        heapq.heapify(height)
-        a,b = heapq.nlargest(2, height)
-        print (a,b)
-        print(dict_new)
+        def fib(n):
+                if n == 0: 
+                        return 0
+                elif n == 1 or n == 2 :
+                        return 1
+                else :
+                        return (fib(n-1) + fib(n-2))        
 
-        length = min(a,b)
-        print(dict_new[a])
-        print(dict_new[b])
-        '''
-        a = [2,3,4,5,6,7]
-        for x in a[::-1]:
-                print(x)
+                
+        print(fib(9))
+                
+
+
         
 

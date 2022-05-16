@@ -1,0 +1,20 @@
+How to identify a DP problem?
+    1) A DP problem will be of the follwoing format.
+    What is the minimum cost of doing...
+    What is the maximum profit from...
+    How many ways are there to do...
+    What is the longest possible...
+    Is it possible to reach a certain point...
+    
+    2) A certain state will depend on the answers to previous state
+
+Top down and bottom up:
+    Bottom UP: Iteration starts form base cases. expmple we will know dp(0) and dp(1) and will calculate dp(3) based on these two.
+    Bottom up is usually faster and uses array and loops
+
+    Top Down: Uses recursion and hash maps. calculated top results first
+
+What are the steps for solving a DP problem
+1) A function or data structure that will compute/contain the answer to the problem for every given state. we need to decide the arguments to this function
+2) Find the recurrance relationsship. example f(i) = f(i-1) + f(i-2)
+3) Find base cases: for example, f(0) = 0, f(1) = 1 f(2) = 1
