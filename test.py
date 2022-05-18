@@ -1,4 +1,6 @@
-from collections import deque
+from cmath import pi
+from collections import defaultdict, deque
+
 class bstNode:
         def __init__(self, num):
                 self.num = num
@@ -24,18 +26,7 @@ def bstInsert(root, value):
         return root                        
 
 if __name__ == '__main__':
-        def fib(n):
-                if n == 0: 
-                        return 0
-                elif n == 1 or n == 2 :
-                        return 1
-                else :
-                        return (fib(n-1) + fib(n-2))        
-
-                
-        print(fib(9))
-                
-
-
-        
-
+        text1 = "abcde"
+        text2 = "ace"
+        dp_grid = [[0] * (3) for _ in range(2)]
+        print(dp_grid)
