@@ -1,0 +1,137 @@
+Two questions
+Que 1: API-design (15 mins):
+posing data on multiple social media platforms together. Write API methos, request and response for
+1. Posting message on a single social media platform
+2. Posting message on multiple social media platforms together
+3. getting stats of a specific message
+4. deleting a message.
+
+example:
+MethodName: PostMessage
+Request:
+    messageId
+    socialMediaID
+Response:
+    Status message.    
+
+Que 2: Problem solving (30 mins):
+'''
+You're developing a system for scheduling advising meetings with students in a Computer Science program. Each meeting should be scheduled when a student has completed 50% of their academic program.
+
+Each course at our university has at most one prerequisite that must be taken first. No two courses share a prerequisite. There is only one path through the program.
+
+Write a function that takes a list of (prerequisite, course) pairs, and returns the name of the course that the student will be taking when they are halfway through their program. (If a track has an even number of courses, and therefore has two "middle" courses, you should return the first one.)
+
+Sample input 1: (arbitrarily ordered)
+pairs1 = [
+	["Foundations of Computer Science", "Operating Systems"],
+	["Data Structures", "Algorithms"],
+	["Computer Networks", "Computer Architecture"],
+	["Algorithms", "Foundations of Computer Science"],
+	["Computer Architecture", "Data Structures"],
+	["Software Design", "Computer Networks"]
+]
+
+In this case, the order of the courses in the program is:
+	Software Design
+	Computer Networks
+	Computer Architecture
+	Data Structures
+	Algorithms
+	Foundations of Computer Science
+	Operating Systems
+
+Sample output 1:
+	"Data Structures"
+
+Sample input 2:
+pairs2 = [
+    ["Algorithms", "Foundations of Computer Science"],
+    ["Data Structures", "Algorithms"],
+    ["Foundations of Computer Science", "Logic"],
+    ["Logic", "Compilers"],
+    ["Compilers", "Distributed Systems"],
+]
+
+Sample output 2:
+	"Foundations of Computer Science"
+
+Sample input 3:
+pairs3 = [
+	["Data Structures", "Algorithms"],
+]
+
+Sample output 3:
+	"Data Structures"
+
+All Test Cases:
+halfway_course(pairs1) => "Data Structures"
+halfway_course(pairs2) => "Foundations of Computer Science"
+halfway_course(pairs3) => "Data Structures"
+
+Complexity analysis variables:
+
+n: number of pairs in the input
+'''
+
+pairs1 = [
+    ["Foundations of Computer Science", "Operating Systems"],
+    ["Data Structures", "Algorithms"],
+    ["Computer Networks", "Computer Architecture"],
+    ["Algorithms", "Foundations of Computer Science"],
+    ["Computer Architecture", "Data Structures"],
+    ["Software Design", "Computer Networks"],
+]
+
+pairs2 = [
+    ["Algorithms", "Foundations of Computer Science"],
+    ["Data Structures", "Algorithms"],
+    ["Foundations of Computer Science", "Logic"],
+    ["Logic", "Compilers"],
+    ["Compilers", "Distributed Systems"],
+ ]
+
+pairs3 = [
+    ["Data Structures", "Algorithms"],
+]
+
+My solution:
+
+if __name__ == "__main__":
+    pairs1 = [
+	["Foundations of Computer Science", "Operating Systems"],
+	["Data Structures", "Algorithms"],
+	["Computer Networks", "Computer Architecture"],
+	["Algorithms", "Foundations of Computer Science"],
+	["Computer Architecture", "Data Structures"],
+	["Software Design", "Computer Networks"]
+]
+ 
+    ans = []
+    preqCourses = {}
+    for pair in pairs1:
+        preqCourses[pair[1]] = pair[1]
+   
+    #print(preqCourses)
+   
+    for pair in pairs1:
+        if pair[0] not in preqCourses.keys():
+            firstCourse = pair[0]
+    ans.append(firstCourse)
+    
+    total_course = len(pairs1) +  1
+    total_course2 = len(pairs1) +  1
+    while(total_course):
+        for pair in pairs1:
+            if pair[0] ==  firstCourse:
+                nextcourse = pair[1]
+                ans.append(nextcourse)
+                firstCourse = nextcourse
+        total_course -= 1
+    
+    print(ans)            
+    print(total_course2//2)
+    if (total_course2 % 2 == 0):
+        print(ans[total_course2//2 - 1])
+    else:
+        print(ans[total_course2//2]) 

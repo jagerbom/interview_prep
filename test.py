@@ -1,5 +1,6 @@
 from cmath import pi
 from collections import defaultdict, deque
+from traceback import print_tb
 
 class bstNode:
         def __init__(self, num):
@@ -26,7 +27,10 @@ def bstInsert(root, value):
         return root                        
 
 if __name__ == '__main__':
-        text1 = "abcde"
-        text2 = "ace"
-        dp_grid = [[0] * (3) for _ in range(2)]
-        print(dp_grid)
+        matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+        print(matrix)
+        numCols = len(matrix[0])
+        cols = [0]*numCols
+        for i in range(numCols):
+                cols[i] = [row[i] for row in matrix]
+        print(cols)        
