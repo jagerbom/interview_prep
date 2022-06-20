@@ -1,0 +1,22 @@
+Interview 1:
+
+1. general resume
+2. Coding question: 
+Deep copy of a linked list with a next pointer and jump pointer.
+
+Interview 2:
+OS:
+Write a code to demostrate deadlock
+Write a code to demonstrate porcess synconisation (semaphores)
+what is a critical section.
+
+TCP:
+what is diff between UDP and TCP
+write seq no and ack no for a series of data transfer between client and server
+
+SSL:
+explain SSL handshake
+
+Coding:
+given a string str = "jdjbbababbabb" (example)
+find all possible palindromes of length more than 5 (return number of such palindromes)
