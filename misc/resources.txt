@@ -1,6 +1,7 @@
 https://stackoverflow.com/questions/509211/understanding-slice-notation : Slicing in python explained
 https://leetcode.com/discuss/interview-question/1354020/Tinder-karat-interview -> karat interview
 
+
 system design question for karat interview:
 
     Table User with userInfo and another table User_Relationship with columns as User1 ( Indexed ) and User2 ( Indexed ) and relationship ( with values as Friend ). The User_Relationship could be bi-directional so i.e., if A is friend of B then USER_Relationship table can have it as A, B, Friend as a row or B,A, Friend. How do you find a good scalable solution to find count of friends for a given user
@@ -15,3 +16,7 @@ system design question for karat interview:
     a. In case of banking application where there are deposits and payments
     b. Metadata retrieval for media streaming
     c. Data analytics for # of viewers etc.,
+
+Networking:
+https://www.computer-networking.info/2nd/html/protocols/tcp.html :  TCP explained
+https://www.youtube.com/playlist?list=PLdTgpAz0qq7iollff0Yk_v-1qKosrIFkO : What happens when we type google.com in browswe
